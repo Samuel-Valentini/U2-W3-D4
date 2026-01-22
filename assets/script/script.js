@@ -52,11 +52,11 @@ const generateGallery = (query) => {
                         <div
                             class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <button
-                                    type="button"
+                                <a
+                                    href="./original-image.html?imageID=${idOfUrl[i]}&query=${query}"
                                     class="btn btn-sm btn-outline-secondary">
                                     View
-                                </button>
+                                </a>
                                 <button
                                     type="button"
                                     class="btn btn-sm btn-outline-secondary hide-btn">
