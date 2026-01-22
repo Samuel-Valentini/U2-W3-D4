@@ -57,17 +57,27 @@ const generateGallery = (query) => {
                                 </button>
                                 <button
                                     type="button"
-                                    class="btn btn-sm btn-outline-secondary">
+                                    class="btn btn-sm btn-outline-secondary hide-btn">
                                     Hide
                                 </button>
                             </div>
-                            <small class="text-muted">ID: </small>
+                            <small class="text-muted">ID: ${idOfUrl[i]}</small>
                         </div>
                     </div>
                 </div>
             </div>
         `;
             }
+
+            // creiamo la comparsa con il button
+
+            const hideBtn = document.querySelectorAll(".hide-btn");
+
+            hideBtn.forEach((button) => {
+                button.addEventListener("click", (e) => {
+                    e.target.closest("div.col-md-4").classList.add("d-none");
+                });
+            });
 
             // fine codice
         })
