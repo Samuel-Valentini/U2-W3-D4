@@ -69,7 +69,7 @@ const generateGallery = (query) => {
         `;
             }
 
-            // creiamo la comparsa con il button
+            // creiamo la scomparsa con il button
 
             const hideBtn = document.querySelectorAll(".hide-btn");
 
