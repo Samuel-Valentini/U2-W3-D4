@@ -27,6 +27,8 @@ fetch(`https://api.pexels.com/v1/photos/${imageID}`, {
         // cardsBox.innerHTML = null;
 
         let originalURL = objectList.src.original;
+        let artist = objectList.photographer;
+        let artistSite = objectList.photographer_url;
 
         cardsBox.innerHTML = `
             <div class="col-12">
@@ -37,6 +39,10 @@ fetch(`https://api.pexels.com/v1/photos/${imageID}`, {
                         class="bd-placeholder-img card-img-top" />
                     <div class="card-body">
                         <h5 class="card-title">${query}</h5>
+                        <hr>
+                        <p>Artist: ${artist}</p> 
+                        <a href="${artistSite}" target="_blank">Sito di  ${artist} </a>
+                        <hr>
                         <div
                             class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
