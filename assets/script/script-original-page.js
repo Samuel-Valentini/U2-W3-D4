@@ -8,6 +8,8 @@ const query = allParam.get("query");
 
 const cardsBox = document.getElementById("cards-box");
 
+const body = document.querySelector("body");
+
 fetch(`https://api.pexels.com/v1/photos/${imageID}`, {
     headers: {
         authorization:
@@ -29,6 +31,9 @@ fetch(`https://api.pexels.com/v1/photos/${imageID}`, {
         let originalURL = objectList.src.original;
         let artist = objectList.photographer;
         let artistSite = objectList.photographer_url;
+        let averageColor = objectList.avg_color;
+
+        body.style.cssText = `background-color: ${averageColor}!important;`;
 
         cardsBox.innerHTML = `
             <div class="col-12">
