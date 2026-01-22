@@ -5,6 +5,8 @@ let query = "family";
 const cardsBox = document.getElementById("cards-box");
 const loadImagesBtn = document.getElementById("load-images");
 const loadImages2Btn = document.getElementById("load-images2");
+const searchValue = document.getElementById("Search");
+const searchBtn = document.getElementById("button-search");
 
 // la funzione generateGallery genera la galleria a partire da una query
 
@@ -108,4 +110,8 @@ loadImages2Btn.addEventListener("click", () => {
                         </div>`;
 
     generateGallery("tigers");
+});
+
+searchBtn.addEventListener("click", () => {
+    generateGallery(searchValue.value);
 });
