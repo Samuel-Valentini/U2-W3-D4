@@ -3,6 +3,7 @@ console.log("script.js online");
 let query = "family";
 
 const cardsBox = document.getElementById("cards-box");
+const loadImagesBtn = document.getElementById("load-images");
 
 // la funzione generateGallery genera la galleria a partire da una query
 
@@ -74,4 +75,15 @@ const generateGallery = (query) => {
         });
 };
 
-generateGallery(query);
+loadImagesBtn.addEventListener("click", () => {
+    cardsBox.innerHTML = `<div class="text-center">
+                            <div
+                                class="spinner-border"
+                                style="font-size: 50vw"
+                                role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>`;
+
+    generateGallery(query);
+});

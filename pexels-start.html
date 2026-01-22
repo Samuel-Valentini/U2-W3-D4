@@ -131,7 +131,9 @@
                         and display them in a cool way!
                     </p>
                     <p>
-                        <a href="#" class="btn btn-primary my-2">Load Images</a>
+                        <button class="btn btn-primary my-2" id="load-images">
+                            Load Images
+                        </button>
                         <a href="#" class="btn btn-secondary my-2"
                             >Load Secondary Images</a
                         >
@@ -140,16 +142,7 @@
             </section>
             <div class="album py-5 bg-light">
                 <div class="container">
-                    <div class="row" id="cards-box">
-                        <div class="text-center">
-                            <div
-                                class="spinner-border"
-                                style="font-size: 50vw"
-                                role="status">
-                                <span class="visually-hidden">Loading...</span>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="row" id="cards-box"></div>
                 </div>
             </div>
         </main>
