@@ -7,6 +7,7 @@ const loadImagesBtn = document.getElementById("load-images");
 const loadImages2Btn = document.getElementById("load-images2");
 const searchValue = document.getElementById("Search");
 const searchBtn = document.getElementById("button-search");
+const searchForm = document.getElementById("search-form");
 
 // la funzione generateGallery genera la galleria a partire da una query
 
@@ -112,6 +113,7 @@ loadImages2Btn.addEventListener("click", () => {
     generateGallery("tigers");
 });
 
-searchBtn.addEventListener("click", () => {
+searchForm.addEventListener("submit", (e) => {
+    e.preventDefault();
     generateGallery(searchValue.value);
 });
